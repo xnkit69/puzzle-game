@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style> 
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #f0f0f0; 
+    font-family: Arial, sans-serif;
+} 
+
+.logo-container { 
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} 
+
+.logo-image {
+    max-width: 100%;
+    height: 50vh; /* MADE BY ANKIT */
+    object-fit: cover; /* MADE BY ANKIT */
+    margin-bottom: 20px; /* MAADE BY ANKIT */
+}
+
+.generate-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.generate-button:hover {
+    background-color: #0056b3;
+}
+
+</style> 
+</head> 
+<body> 
+<div class="logo-container"> 
+    <?php 
+    $imageUrl = "";
+    if (isset($_POST['generate'])) {
+        $randomNumber = rand(1, 10000); 
+        $imageUrl = "https://picsum.photos/800/600?random=" . $randomNumber; 
+    }
+    ?>
+    <?php
+    if (!empty($imageUrl)) {
+        echo "<img class=\"logo-image\" src=\"$imageUrl\" alt=\"Random Logo\">";
+    }
+    ?> 
+    <form method="post">
+        <button class="generate-button" type="submit" name="generate">Generate Random Logo</button>
+    </form>
+</div> 
+</body> 
+</html>
