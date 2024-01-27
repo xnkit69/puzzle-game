@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .3s ease-out;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  line-height: 1.25;
+  min-height: 100vh;
+  color: #313131;
+  display: flex;
+}
+
+body, h1 {
+  font-size-adjust: 0.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: none;
+  -webkit-appearance: none;
+}
+
+button:active {
+  transform: scale(.9);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+main {
+  padding: 0 1em;
+  text-align: center;
+  margin: auto;
+}
+
+.informations {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  margin-bottom: 1em;
+  width: 10em;
+}
+
+.social-links {
+  margin-bottom: 4em;
+}
+
+.social-links ul,
+.social-links ul li a {
+  display: flex;
+}
+
+.social-links ul li {
+  flex: 1;
+}
+
+.social-links ul li a {
+  width: fit-content;
+  margin: auto;
+}
+
+
+.social-icon {
+  margin-right: .3em;
+}
+
+button.call {
+  background: #3C9EE4;
+  color: #fff;
+  padding: .5em 1.5em;
+  border-radius: 2em;
+  font-size: 1.2em;
+}
+
+
+
+@media (min-width: 43.75em) {
+  body {
+    line-height: 1.375em;
+  }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+  .profile-picture {
+    width: 12em;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    line-height: 1.05em;
+  }
+  .profile-picture {
+    width: 14em;
+  }
+}
